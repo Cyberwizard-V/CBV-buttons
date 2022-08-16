@@ -1,5 +1,28 @@
-// DEFAULT //
+// DEFAULT - COLORS - FONT // ------------------------------------------------------------------------------------------------------------ //
+
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+$color_1: #ffff; // White
+$color_2: rgb(0, 0, 0); // black
+$color_3: rgb(122, 92, 255); // main-purple
+$color_4: rgb(168, 148, 253); // light-purple
+$color_5: rgb(94, 72, 192); // dark-purple
+
+
+
+
+// DEFAULT - STYLE //
 
 body{
     margin: 0;
+    background-image: url("../images/background-CBV.png");
+    background-size: contain;
+    background-position: center;
+    position: sticky;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Silkscreen', cursive;
 }
+
+// ------------- // ------------------------------------------------------------------------------------------------------------ //
+
