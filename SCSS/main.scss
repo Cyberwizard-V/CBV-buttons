@@ -36,14 +36,10 @@ $color_6: #2d2d2d; // grey
 
 body{
     margin: 0;
-    background-image: url("../images/background-CBV.png");
-    background-size: contain;
-    background-position: center;
-    position: sticky;
-    width: 100vw;
-    height: 100vh;
     font-family: 'Silkscreen', cursive;
-    line-height: 15px;
+    line-height: 20px;
+    height: 100vh;
+    width: 100vw;
 }
 a{
     color: $color_6;
@@ -64,52 +60,83 @@ a{
 
     }
 }
+p,h1,h2,h3,h4,h5,span{
+    color: $color_1;
+}
 
 // ------------- // ------------------------------------------------------------------------------------------------------------ //
 
 .main-container{
-    position: relative;
-    padding: 0 300px;
-    max-width: 1240px;
-    margin: 0 200px;
-    &.CBV-Buttons{
-
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    section{
+        scroll-snap-align: start;
+        width: 100vw;
+        height: 100vh;
     }
     .row1{
+        background-image: url("../images/background-CBV.png");
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat no-repeat;
+
         &.title-CBV-buttons{
             display: flex;
             flex-direction: column;
             justify-content: center;
             text-align: center;
             height: 100vh;
-            h1{
-                font-size: 5rem;
-                font-weight: 700;
-                color: $color_1;
-                @include fadetransition();
-
-                &:hover{
-                    text-shadow:$color_4 0px 0px 1px,
-                    $color_4 0px 0px 1px, 
-                    $color_4 0px 0px 5px, 
-                    $color_4 0px 0px 10px, 
-                    $color_4 0px 0px 15px, 
-                    $color_4 0px 0px 20px, 
-                    $color_5 0px 0px 25px, 
-                    $color_5 0px 0px 30px, 2px 2px 2px 
-                    rgba(140,64,206,0);
-                    @include fadetransition();
-
+            .container{
+                &.text{
+                    h1{
+                        font-size: 5rem;
+                        font-weight: 700;
+                        color: $color_1;
+                        @include fadetransition();
+                        &:hover{
+                            text-shadow:$color_4 0px 0px 1px,
+                            $color_4 0px 0px 1px, 
+                            $color_4 0px 0px 5px, 
+                            $color_4 0px 0px 10px, 
+                            $color_4 0px 0px 15px, 
+                            $color_4 0px 0px 20px, 
+                            $color_5 0px 0px 25px, 
+                            $color_5 0px 0px 30px, 2px 2px 2px 
+                            rgba(140,64,206,0);
+                            @include fadetransition();
+                        }
+                    }
+                    p{
+                        font-size: 1.2rem;
+                        position: relative;
+                        bottom: 25px;
+                        color: $color_1;
+                    }
                 }
-                
             }
-            p{
-                font-size: 1.0rem;
-                text-align: left;
-                padding: 0 100px;
-                position: relative;
-                bottom: 25px;
-                color: $color_1;
+        }
+    }
+    .row2{
+        background-color:#4b34b3;
+        width: 100%;
+        height: 100%;
+        &.CBV-buttons{
+            .container{
+
+            }
+        }
+    }
+    .row3{
+        background-color:#6543ff;
+        width: 100%;
+        height: 100%;
+        &.CBV-buttons{
+            .container{
             }
         }
     }
