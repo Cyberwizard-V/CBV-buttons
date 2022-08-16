@@ -8,14 +8,14 @@ body {
 }
 
 a {
-  color: #2d2d2d;
-  text-decoration: underline;
+  color: #5e5e5e;
+  text-shadow: #4b34b3 0px 0px 1px, white 0px 0px 1px, white 0px 0px 5px, white 0px 0px 5px, white 0px 0px 6px, #4b34b3 0px 0px 15px, 1px 1px 1px rgba(140, 64, 206, 0);
   transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
 }
 a:hover {
-  color: #4b34b3;
+  color: white;
   text-shadow: #a894fd 0px 0px 1px, #a894fd 0px 0px 1px, #a894fd 0px 0px 5px, #a894fd 0px 0px 10px, #a894fd 0px 0px 15px, #a894fd 0px 0px 20px, #4b34b3 0px 0px 25px, #4b34b3 0px 0px 30px, 2px 2px 2px rgba(140, 64, 206, 0);
   transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -46,6 +46,22 @@ p, h1, h2, h3, h4, h5, span {
   width: 100%;
   height: 100%;
   background-repeat: no-repeat no-repeat;
+}
+.main-container .row1 .topicons a {
+  text-shadow: none !important;
+  opacity: 0.8;
+}
+.main-container .row1 .topicons a:hover {
+  text-shadow: #a894fd 0px 0px 1px, #a894fd 0px 0px 1px, #a894fd 0px 0px 5px, #a894fd 0px 0px 5px, #a894fd 0px 0px 5px, #a894fd 0px 0px 10px, #4b34b3 0px 0px 15px, #4b34b3 0px 0px 20px, 2px 2px 2px rgba(140, 64, 206, 0) !important;
+  opacity: 1;
+}
+.main-container .row1 .topicons a i {
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 10px;
 }
 .main-container .row1.title-CBV-buttons {
   display: flex;

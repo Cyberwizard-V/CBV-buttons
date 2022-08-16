@@ -8,6 +8,7 @@ $color_3: #7a5cff; // main-purple
 $color_4: #a894fd; // light-purple
 $color_5: #4b34b3; // dark-purple
 $color_6: #2d2d2d; // grey
+$color_7: #5e5e5e; // light grey
 
 
 
@@ -42,11 +43,17 @@ body{
     width: 100vw;
 }
 a{
-    color: $color_6;
-    text-decoration: underline;
+    color: $color_7;
+    text-shadow:$color_5 0px 0px 1px,
+    $color_1 0px 0px 1px, 
+    $color_1 0px 0px 5px, 
+    $color_1 0px 0px 5px, 
+    $color_1 0px 0px 6px, 
+    $color_5 0px 0px 15px, 1px 1px 1px 
+    rgba(140,64,206,0);
     @include fadetransition();
     &:hover{
-        color: $color_5;
+        color: $color_1;
         text-shadow:$color_4 0px 0px 1px,
         $color_4 0px 0px 1px, 
         $color_4 0px 0px 5px, 
@@ -57,7 +64,6 @@ a{
         $color_5 0px 0px 30px, 2px 2px 2px 
         rgba(140,64,206,0);
         @include fadetransition();
-
     }
 }
 p,h1,h2,h3,h4,h5,span{
@@ -84,6 +90,33 @@ p,h1,h2,h3,h4,h5,span{
         width: 100%;
         height: 100%;
         background-repeat: no-repeat no-repeat;
+
+        .topicons{
+            a{
+                text-shadow: none!important;
+                opacity: 0.8;
+                &:hover{
+                    text-shadow:$color_4 0px 0px 1px,
+                    $color_4 0px 0px 1px, 
+                    $color_4 0px 0px 5px, 
+                    $color_4 0px 0px 5px, 
+                    $color_4 0px 0px 5px, 
+                    $color_4 0px 0px 10px, 
+                    $color_5 0px 0px 15px, 
+                    $color_5 0px 0px 20px, 2px 2px 2px 
+                    rgba(140,64,206,0)!important;
+                    opacity: 1;
+                }
+                i{
+                    font-size: 30px;
+                    color: $color_1;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    margin: 10px;
+                }   
+            }
+        }
 
         &.title-CBV-buttons{
             display: flex;
