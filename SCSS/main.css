@@ -26,6 +26,24 @@ p, h1, h2, h3, h4, h5, span {
   color: white;
 }
 
+#particles-js {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+
+#particles-js2 {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+
+#particles-js3 {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+
 .main-container {
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
@@ -33,6 +51,7 @@ p, h1, h2, h3, h4, h5, span {
   overflow-x: hidden;
   width: 100%;
   height: 100%;
+  position: relative;
 }
 .main-container section {
   scroll-snap-align: start;
@@ -46,6 +65,7 @@ p, h1, h2, h3, h4, h5, span {
   width: 100%;
   height: 100%;
   background-repeat: no-repeat no-repeat;
+  position: relative;
 }
 .main-container .row1 .topicons a {
   text-shadow: none !important;
@@ -70,6 +90,10 @@ p, h1, h2, h3, h4, h5, span {
   text-align: center;
   height: 100vh;
 }
+.main-container .row1.title-CBV-buttons .container {
+  position: relative;
+  z-index: 10;
+}
 .main-container .row1.title-CBV-buttons .container.text h1 {
   font-size: 5rem;
   font-weight: 700;
@@ -91,12 +115,14 @@ p, h1, h2, h3, h4, h5, span {
   color: white;
 }
 .main-container .row2 {
-  background-color: #4b34b3;
+  background: linear-gradient(180deg, rgb(147, 113, 177) 0%, rgb(94, 71, 114) 30%, rgb(68, 50, 83) 70%);
   width: 100%;
   height: 100%;
+  position: relative;
 }
 .main-container .row3 {
-  background-color: #6543ff;
+  background-color: #443253;
   width: 100%;
   height: 100%;
+  position: relative;
 }/*# sourceMappingURL=main.css.map */
