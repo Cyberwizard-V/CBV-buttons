@@ -9,4 +9,56 @@ body {
   width: 100vw;
   height: 100vh;
   font-family: "Silkscreen", cursive;
+  line-height: 15px;
+}
+
+a {
+  color: #2d2d2d;
+  text-decoration: underline;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+a:hover {
+  color: #4b34b3;
+  text-shadow: #a894fd 0px 0px 1px, #a894fd 0px 0px 1px, #a894fd 0px 0px 5px, #a894fd 0px 0px 10px, #a894fd 0px 0px 15px, #a894fd 0px 0px 20px, #4b34b3 0px 0px 25px, #4b34b3 0px 0px 30px, 2px 2px 2px rgba(140, 64, 206, 0);
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+
+.main-container {
+  position: relative;
+  padding: 0 300px;
+  max-width: 1240px;
+  margin: 0 200px;
+}
+.main-container .row1.title-CBV-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+.main-container .row1.title-CBV-buttons h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+.main-container .row1.title-CBV-buttons h1:hover {
+  text-shadow: #a894fd 0px 0px 1px, #a894fd 0px 0px 1px, #a894fd 0px 0px 5px, #a894fd 0px 0px 10px, #a894fd 0px 0px 15px, #a894fd 0px 0px 20px, #4b34b3 0px 0px 25px, #4b34b3 0px 0px 30px, 2px 2px 2px rgba(140, 64, 206, 0);
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+.main-container .row1.title-CBV-buttons p {
+  font-size: 1rem;
+  text-align: left;
+  padding: 0 100px;
+  position: relative;
+  bottom: 25px;
+  color: white;
 }/*# sourceMappingURL=main.css.map */

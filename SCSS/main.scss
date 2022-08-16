@@ -3,13 +3,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
 
 $color_1: #ffff; // White
-$color_2: rgb(0, 0, 0); // black
-$color_3: rgb(122, 92, 255); // main-purple
-$color_4: rgb(168, 148, 253); // light-purple
-$color_5: rgb(94, 72, 192); // dark-purple
+$color_2: #000000; // black
+$color_3: #7a5cff; // main-purple
+$color_4: #a894fd; // light-purple
+$color_5: #4b34b3; // dark-purple
+$color_6: #2d2d2d; // grey
 
 
 
+// Animations & Transitions
+@mixin fadetransition{
+    transition: all 0.30s ease-in-out;
+    -moz-transition: all .30s ease-in-out;
+    -webkit-transition: all .30s ease-in-out;
+  
+  }
+  @mixin flexgrid($columns, $columnGap, $rowGap: $columnGap){
+    --columnGap: #{$columnGap + 0px};
+    --rowGap: #{$rowGap + 0px};
+    --columns: #{$columns};
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--rowGap) var(--columnGap);
+    >*{
+      --gap: inherit;
+      --columns: inherit;
+      flex-basis: calc((100% - var(--columnGap) * (var(--columns) - 1)) / var(--columns));
+    }
+  }
 
 // DEFAULT - STYLE //
 
@@ -22,7 +43,74 @@ body{
     width: 100vw;
     height: 100vh;
     font-family: 'Silkscreen', cursive;
+    line-height: 15px;
+}
+a{
+    color: $color_6;
+    text-decoration: underline;
+    @include fadetransition();
+    &:hover{
+        color: $color_5;
+        text-shadow:$color_4 0px 0px 1px,
+        $color_4 0px 0px 1px, 
+        $color_4 0px 0px 5px, 
+        $color_4 0px 0px 10px, 
+        $color_4 0px 0px 15px, 
+        $color_4 0px 0px 20px, 
+        $color_5 0px 0px 25px, 
+        $color_5 0px 0px 30px, 2px 2px 2px 
+        rgba(140,64,206,0);
+        @include fadetransition();
+
+    }
 }
 
 // ------------- // ------------------------------------------------------------------------------------------------------------ //
 
+.main-container{
+    position: relative;
+    padding: 0 300px;
+    max-width: 1240px;
+    margin: 0 200px;
+    &.CBV-Buttons{
+
+    }
+    .row1{
+        &.title-CBV-buttons{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            height: 100vh;
+            h1{
+                font-size: 5rem;
+                font-weight: 700;
+                color: $color_1;
+                @include fadetransition();
+
+                &:hover{
+                    text-shadow:$color_4 0px 0px 1px,
+                    $color_4 0px 0px 1px, 
+                    $color_4 0px 0px 5px, 
+                    $color_4 0px 0px 10px, 
+                    $color_4 0px 0px 15px, 
+                    $color_4 0px 0px 20px, 
+                    $color_5 0px 0px 25px, 
+                    $color_5 0px 0px 30px, 2px 2px 2px 
+                    rgba(140,64,206,0);
+                    @include fadetransition();
+
+                }
+                
+            }
+            p{
+                font-size: 1.0rem;
+                text-align: left;
+                padding: 0 100px;
+                position: relative;
+                bottom: 25px;
+                color: $color_1;
+            }
+        }
+    }
+}
